@@ -1,0 +1,111 @@
+repo=app-local-chat-arena
+scenario=Local Chat Arena
+url_search=(default)
+captured_at=2026-05-20T15:34:18.723Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=local-chat-arena-demo
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/01-local-chat-arena.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "app-local-chat-arena",
+    "commit": "a813762",
+    "timestamp": "2026-05-20T15:34:18.580Z",
+    "owner": "ai-webgpu-lab",
+    "track": "integration",
+    "scenario": "local-chat-arena-demo",
+    "notes": "arena-fast:ttft=17.3,decode=228.77,turn=331.1; arena-steady:ttft=21.2,decode=215.23,turn=328.1; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:34:18.723Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "01-local-chat-arena"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "arena-profile-driven",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "mixed",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "local-chat-arena-demo",
+    "input_profile": "prompt-21-output-52",
+    "model_id": "arena-fast",
+    "context_tokens": 21,
+    "output_tokens": 52
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1000.5,
+      "init_ms": 80.2,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 17.3,
+      "prefill_tok_per_sec": 889.83,
+      "decode_tok_per_sec": 228.77,
+      "turn_latency_ms": 331.1
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/01-local-chat-arena.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/app-local-chat-arena/",
+    "app_surface_adapter": {
+      "id": "deterministic-observatory",
+      "label": "Deterministic Observatory",
+      "version": "1.0.0",
+      "capabilities": [
+        "preset-replay",
+        "renderer-scorecard",
+        "telemetry-record"
+      ],
+      "surfaceType": "synthetic",
+      "isReal": false,
+      "status": "deterministic",
+      "message": "Deterministic harness — replace by registering a real app surface adapter."
+    },
+    "screenshots": [
+      "./reports/screenshots/01-local-chat-arena.png"
+    ]
+  }
+}

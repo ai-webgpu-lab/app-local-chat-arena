@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "repo": "app-local-chat-arena",
+    "commit": "a813762",
+    "timestamp": "2026-05-20T15:34:23.385Z",
+    "owner": "ai-webgpu-lab",
+    "track": "integration",
+    "scenario": "local-chat-arena-demo",
+    "notes": "arena-fast:ttft=17.2,decode=220.25,turn=334.6; arena-steady:ttft=23.1,decode=211.81,turn=334.4; realAdapter=fallback(manifest fetch failed for https://ai-webgpu-lab.github.io/app-local-chat-arena/manifests/arena-v1.json); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:34:23.513Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "02-local-chat-arena-real-chat-arena",
+    "capture_url_search": "?mode=real-chat-arena"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "arena-profile-driven",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "mixed",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "local-chat-arena-demo",
+    "input_profile": "prompt-21-output-52",
+    "model_id": "arena-fast",
+    "context_tokens": 21,
+    "output_tokens": 52
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 882.8,
+      "init_ms": 76.2,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 17.2,
+      "prefill_tok_per_sec": 941.7,
+      "decode_tok_per_sec": 220.25,
+      "turn_latency_ms": 334.6
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/02-local-chat-arena-real-chat-arena.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/app-local-chat-arena/",
+    "app_surface_adapter": {
+      "id": "stub-not-connected",
+      "label": "App Surface Adapter Stub (not connected)",
+      "status": "not-connected",
+      "isReal": false,
+      "version": "n/a",
+      "capabilities": [
+        "preset-replay",
+        "renderer-scorecard",
+        "telemetry-record"
+      ],
+      "surfaceType": "stub",
+      "message": "No real app surface adapter has registered for mode='real-chat-arena'. Falling back to the deterministic harness."
+    },
+    "screenshots": [
+      "./reports/screenshots/02-local-chat-arena-real-chat-arena.png"
+    ]
+  }
+}
